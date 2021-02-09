@@ -1,23 +1,16 @@
-<div class="container">
-    <nav class="navbar navbar-default" role="navigation">
-      <div class="navbar-header">
-        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>    
-      </div>
-      <div class="navbar-collapse collapse">
-        <ul class="nav navbar-nav">
-          <li class="navbar-left"><a href="#">Left 1</a></li>
-          <li class="navbar-left"><a href="#">Left 2</a></li>
-          <li class="active"><a href="#">Center 1</a></li>
-          <li><a href="#">Center 2</a></li>
-          <li><a href="#">Center 3</a></li>
-          <li class="navbar-right"><a href="#">Right 2</a></li>
-          <li class="navbar-right"><a href="#">Right 1</a></li>
-        </ul>
-      </div>
-    </nav>
-    <h1>Hello</h1>
-</div>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">Flux Master</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarText">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+      
+      </ul>
+      <span class="navbar-text">
+        <i class="fa fa-cog settings"></i>
+      </span>
+    </div>
+  </div>
+</nav>
