@@ -28,7 +28,7 @@
                         <div class="form-check">
                             <input class="form-check-input" type="radio" name="category" id="CategorieRadio1">
                             <label class="form-check-label" for="CategorieRadio1">
-                                Technologie
+                            Actualités
                             </label>
                         </div>
                         <div class="form-check">
