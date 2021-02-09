@@ -1,0 +1,136 @@
+/* Laurent : Partie du contenu */
+
+body {
+    background-color: #404040;
+}
+
+.containt {
+    padding: 1rem;
+}
+
+.rss-card {
+    width: 60%;
+    background-color: #525252;
+    border: 1px solid #3b3b3b;
+    padding: 1rem;
+    border-radius: 15px;
+    display: block;
+    margin-left: auto;
+    color: #eaeaea;
+    margin-right: auto;
+    user-select: none;
+
+}
+
+.rss-card img {
+    pointer-events: none;
+
+}
+
+.settings-card {
+    width: 80%;
+    background-color: #525252;
+    border: 1px solid #3b3b3b;
+    padding: 1rem;
+    border-radius: 15px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    color: #eaeaea;
+    user-select: none;
+    text-align: center;
+}
+
+.settings-card h1 {
+    border-bottom: 1px solid #dedede;
+}
+
+.settings-card p {
+    background: #656565;
+    color: white;
+    padding: 0.2rem;
+    margin-top: 2%;
+}
+.btn-secondary {
+    background-color: #8a8a8a;
+    border-color: #8a8a8a;
+}
+
+.btn-secondary:hover {
+    background-color: #494949;
+    border-color: #494949;
+}
+
+
+
+.btn-primary {
+    background-color: #7ca1d4;
+    border-color: #7ca1d4;
+}
+
+.btn-danger {
+    background-color: #e76d79;
+    border-color: #e76d79;
+}
+
+.btn-success {
+    background-color: #50bb66;
+    border-color: #50bb66;
+}
+
+.btn-secondary {
+    background-color: #8a8a8a;
+    border-color: #8a8a8a;
+}
+
+.btn-secondary:hover {
+    background-color: #494949;
+    border-color: #494949;
+}
+
+
+
+.btn-primary {
+    background-color: #7ca1d4;
+    border-color: #7ca1d4;
+}
+
+.btn-danger {
+    background-color: #e76d79;
+    border-color: #e76d79;
+}
+
+.btn-success {
+    background-color: #50bb66;
+    border-color: #50bb66;
+}
+
+.btn:focus {
+    border-color: inherit;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+  }
+
+.card-check {
+    width: 25%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.form-check-input:checked {
+    background-color: #353535;
+    border-color: #2f2f2f;
+}
+
+.form-check-input:checked:focus {
+    border-color: inherit;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+
+.button-right {
+    width: 30%;
+    display: block;
+    margin-left: auto;
+}

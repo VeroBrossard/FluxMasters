@@ -1,5 +1,6 @@
 <?php
 
-    include("../public/assets/stl.php");
-    include("../controllers/title_controller.php");
+include("title_controller.php");
+require("themes_controller.php");
+include("../public/assets/stl.php");
 

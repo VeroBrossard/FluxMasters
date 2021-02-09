@@ -9,15 +9,22 @@
                             <span>Bénévolat pour le rugby</span>
                         </div>
 
-                        <div class="col-md-6 offset-md-3 col-lg-3">
-                            <button type="button" class="btn btn-outline-info">Accéder aux informations</button>
+
+                        <div class="col-md-6 align-self-center">
+                            <div class="button-right">
+                                <button type="button" class="btn btn-outline-info">Plus d'infos</button>
+                            </div>
                         </div>
-                        
-                        
+
+                        <div class="row">
+                            <div class="col">
+                                09/02/2021
+                            </div>
+
+                        </div>
                     </div>
                 </div>
             </div>
-
         </div>
     </body>
 

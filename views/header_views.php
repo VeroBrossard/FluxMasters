@@ -1,6 +1,6 @@
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
   <div class="container-fluid">
-    <a class="navbar-brand" href="#"><?= $site_name; ?></a>
+    <a class="navbar-brand" href="/"><?= $site_name; ?></a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -9,7 +9,9 @@
       
       </ul>
       <span class="navbar-text">
-        <i class="fa fa-cog settings"></i>
+      <span data-tooltip="Paramètres" data-flow="bottom">
+        <i class="fa fa-cog settings" onclick="javascript:window.location.href='settings'"></i>
+      </span>
       </span>
     </div>
   </div>
