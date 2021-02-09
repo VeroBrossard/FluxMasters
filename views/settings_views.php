@@ -17,11 +17,11 @@
                         <input type="radio" class="btn-check" name="theme" id="theme2" value="light" autocomplete="off" <?= $theme == "light" ? "checked" : "" ?>>
                         <label class="btn btn-primary" for="theme2">Thème clair</label>
 
-                        <input type="radio" class="btn-check" name="theme" id="theme3" autocomplete="off">
+                        <input type="radio" class="btn-check" name="theme" id="theme3" value="modern" autocomplete="off" <?= $theme == "modern" ? "checked" : "" ?>>
                         <label class="btn btn-danger" for="theme3">Thème moderne</label>
                     </div>
 
-                    <p>Choisissez votre catégorie</p>
+                    <p>Choisissez votre catégorie (Actuelle : <b>Technologie</b>)</p>
 
                     <div class="card-check">
 
@@ -60,7 +60,7 @@
                     </div>
 
 
-                    <p>Nombre d'articles à afficher</p>
+                    <p>Nombre d'articles à afficher (Actuel : <b>5</b>)</p>
 
                     <div class="card-check">
 

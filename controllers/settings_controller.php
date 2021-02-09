@@ -13,6 +13,10 @@
                 } else if($my_theme == "light") {
                     setcookie("theme", "light", time()+3600);
                     header("Location: settings");
+
+                } else if($my_theme == "modern") {
+                    setcookie("theme", "modern", time()+3600);
+                    header("Location: settings");
                 }
             }
-    }
+        }

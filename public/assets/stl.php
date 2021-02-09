@@ -14,6 +14,8 @@
          <link rel="stylesheet" href="assets/css/light_theme.css">
     <?php } else if($theme == "default" || $theme == "") { ?>
         <link rel="stylesheet" href="assets/css/default_theme.css">
+    <?php } else if($theme == "modern") { ?>
+        <link rel="stylesheet" href="assets/css/modern_theme.css">
     <?php } ?>
 
 

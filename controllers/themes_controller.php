@@ -10,5 +10,7 @@
                 $theme_name = "Sombre";
             } else if($theme == "light") {
                 $theme_name = "Clair";
+            } else if($theme == "modern") {
+                $theme_name = "Moderne";
             }
     }
