@@ -36,7 +36,8 @@ $countTotalItems = "0"; //nbre d'items dans le flux d'origine
 echo '<ul>';
 foreach ($rss->channel->item as $item) {
   $countTotalItems++;
-   // var_dump($item);
+  // echo 'vardump de item <br>';
+  // var_dump($item);
   if ($countTotalItems <= $nbrCard) {
 
     $titre = (string) $item->title;
