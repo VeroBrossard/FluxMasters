@@ -14,16 +14,20 @@ function getXml($url)  //pour regler mon pb d'autorisation d'acces au flux rss
   return $curl_response;
 }
 //cookie(nbreArticles) pour le nombre de cards à afficher.
-//cookie(fluxChoice) pour le flux à afficher
 
-// $urlTest = $arrayFluxOffered ['Actualités'];
-//   echo 'var_dump de urlTest <br>';
-// var_dump($urlTest);  
-// echo '***** FIN **** var_dump de urlTest <br>';
+// ***** partie test cookie  category 
+if (!empty($_COOKIE['category'])){  
+  echo 'hosenFluxName   COOKIE ok <br>';
+  $chosenFluxName= $_COOKIE['category'];
+  echo 'hosenFluxName  = ' .  $chosenFluxName . '<br>';
+}
+else{
+  echo 'hosenFluxName  PAS DE COOKIE <br>';
+  setcookie("category", 'Actualités', time()+3600*24);
+  $chosenFluxName = 'Actualités';
+}
 
-//je suppose que le user a choisi 'actualités mettre à jour avec choix cookie'
-//choix du flux à afficher (mettre à jour avec choix du user cf arrayFluxOffered)
-$urlFeed = $arrayFluxOffered ['Actualités'];
+$urlFeed = $arrayFluxOffered [$chosenFluxName];
 $xml_file = getXml($urlFeed);
 $rss = simplexml_load_string($xml_file);
 $fluxTitle = (string) $rss->channel->title;
@@ -32,7 +36,18 @@ $fluxTitle = (string) $rss->channel->title;
 // echo '***** FIN **** var_dump de rss <br>';
 
 // calcul  limitation des items à afficher
-$nbrCardWished = 5;  //nnre de crds à afficher par défaut (mettre à jour avec choix user !!!)
+// ***** partie test cookie  category 
+if (!empty($_COOKIE['numberArticles'])){  
+  echo 'nbrCardWished   COOKIE ok <br>';
+  $nbrCardWished= $_COOKIE['numberArticles'];
+  echo 'nbrCardWished  = ' .  $chosenFluxName . '<br>';
+}
+else{
+  echo 'nbrCardWished  PAS DE COOKIE <br>';
+  setcookie("numberArticles", '5', time()+3600*24);
+  $nbrCardWished = '5';
+}
+//$nbrCardWished = 5;  //nnre de crds à afficher par défaut (mettre à jour avec choix user !!!)
 $nbrItemInFlux = count($rss->channel->item); // nbre d'items dans le flux
 
 $nbrCardToList = ($nbrCardWished <= $nbrItemInFlux) ?  $nbrCardWished : $nbrItemInFlux;
@@ -90,13 +105,6 @@ echo 'nbre totaal de items  = ' .  $countTotalItems . '<br>';
 
 
 
-// ***** partie cookie  
-if (!empty($_COOKIE['category'])){  
-  $chosenFluxName= $_COOKIE['category'];
-  echo 'hosenFluxName  = ' .  $chosenFluxName . '<br>';
-}
-else{
-  echo 'hosenFluxName  PAS DE COOKIE <br>';
-}
+
 
 ?>
