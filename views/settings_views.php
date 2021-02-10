@@ -21,24 +21,24 @@
                         <label class="btn btn-danger" for="theme3">Thème moderne</label>
                     </div>
 
-                    <p>Choisissez votre catégorie (Actuelle : <b>Technologie</b>)</p>
+                    <p>Choisissez votre catégorie (Actuelle : <b><?= $show_categories; ?></b>)</p>
 
                     <div class="card-check">
 
                         <div class="form-check">
-                            <input class="form-check-input" type="radio" value="Actualités" name="category" id="CategorieRadio1">
+                            <input class="form-check-input" type="radio" value="Actualités" name="category" id="CategorieRadio1" <?= $show_categories == "Actualités" ? "checked" : "" ?>>
                             <label class="form-check-label" for="CategorieRadio1">
                             Actualités
                             </label>
                         </div>
                         <div class="form-check">
-                            <input class="form-check-input" type="radio" value="Sécurité" name="category" id="CategorieRadio2">
+                            <input class="form-check-input" type="radio" value="Sécurité" name="category" id="CategorieRadio2" <?= $show_categories == "Sécurité" ? "checked" : "" ?>>
                             <label class="form-check-label" for="CategorieRadio2">
                                 Sécurité
                             </label>
                         </div>
                         <div class="form-check">
-                            <input class="form-check-input" type="radio" value="Culture" name="category" id="CategorieRadio3">
+                            <input class="form-check-input" type="radio" value="Culture" name="category" id="CategorieRadio3" <?= $show_categories == "Culture" ? "checked" : "" ?>>
                             <label class="form-check-label" for="CategorieRadio3">
                                 Culture
                             </label>
@@ -60,24 +60,24 @@
                     </div>
 
 
-                    <p>Nombre d'articles à afficher (Actuel : <b>5</b>)</p>
+                    <p>Nombre d'articles à afficher (Actuel : <b><?= $number_articles; ?></b>)</p>
 
                     <div class="card-check">
 
                         <div class="form-check">
-                            <input class="form-check-input" type="radio" value="5" name="numberArticles" id="NumberArticle1">
+                            <input class="form-check-input" type="radio" value="5" name="numberArticles" id="NumberArticle1" <?= $number_articles == "5" ? "checked" : "" ?>>
                             <label class="form-check-label" for="NumberArticle1">
                                 5
                             </label>
                         </div>
                         <div class="form-check">
-                            <input class="form-check-input" type="radio" value="10" name="numberArticles" id="NumberArticle2">
+                            <input class="form-check-input" type="radio" value="10" name="numberArticles" id="NumberArticle2" <?= $number_articles == "10" ? "checked" : "" ?>>
                             <label class="form-check-label" for="NumberArticle2">
                                 10
                             </label>
                         </div>
                         <div class="form-check">
-                            <input class="form-check-input" type="radio" value="all" name="numberArticles" id="NumberArticle3">
+                            <input class="form-check-input" type="radio" value="Tout" name="numberArticles" id="NumberArticle3" <?= $number_articles == "Tout" ? "checked" : "" ?>>
                             <label class="form-check-label" for="NumberArticle3">
                                 Tout
                             </label>

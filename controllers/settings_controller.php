@@ -1,5 +1,7 @@
 <?php
 
+    require("basicinfo_controller.php");
+
     if(isset($_POST["change"])) {
         
         $my_theme = trim(htmlentities(strip_tags($_POST["theme"])));
@@ -21,3 +23,10 @@
                 header("Location: /");
 
         }
+
+
+    foreach($arrayFluxOffered as $key => $value) {
+        for($key = 0; $key < 5; $key++) {
+            echo $key;
+        }
+    }

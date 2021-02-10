@@ -5,6 +5,7 @@
     require_once("../controllers/boot_controller.php");
 
     require_once("../controllers/settings_controller.php");
+    require_once("../controllers/cookie_controller.php");
 
     include("../views/header_views.php");
 
