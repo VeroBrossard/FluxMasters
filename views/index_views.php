@@ -2,9 +2,7 @@
 
         <h1><?= $fluxTitle ?> </h1>
         <?php
-        // pour   $cardsInfos[$countTotalItems] = ['title' => $title, 'date' => $pubdate, 'urlImg' => $urlImg, 'description' => $description, 'link' => $linkArticle];
-        //$sous_util = $cardsInfos[1];  // exemple recup infos du 1éme item (!! le compte commence à 1)
-        // echo '$sous_util / urlimg  =  ' . $sous_util['urlImg'] . '<br><br>';
+
         foreach ($cardsInfos as $key => $infos) {
             $sous_util = $cardsInfos[$key];
         ?>
@@ -12,16 +10,14 @@
                 <div class="col-6 text-wrap p-0"> <br />
                     <div class="card ">
                         <div class="row text-dark">
-                            <div class="card-body class="px-5"">
+                            <div class="card-body class=" px-5"">
                                 <img src="<?= $sous_util['urlImg'] ?>" style="float: left; padding-right:30px;" width="150px" alt="mini photo de l'article">
                                 <h5 class="card-title fw-normal"><?= $sous_util['title'] ?></h5>
-                                <!-- <p class="card-text">L'école des métiers du numérique</p> -->
-                                <span style="   style="clear: both;">article du <?= $sous_util['date'] ?></span>
-                                <span>                            
+                                <span style="   style=" clear: both;">article du <?= $sous_util['date'] ?></span>
+                                <span>
                                     <button type="button" data-bs-toggle="modal" data-bs-target="#infos<?= $key ?>" class="btn btn-primary ">+
                                         d'info</button>
                                 </span>
-
                                 <!-- Tips:  Si vous ne désirez a sque l'écran parent se grise àl'ouveture de la fenêtre, ,il faut utiliser l’attribut data-backdrop="false" dans le code du bouton déclencheur :-->
                             </div>
                         </div>
@@ -29,8 +25,7 @@
                 </div>
             </div> <!-- fin class row-->
             <!--   fenetre modale liée à <a> ou  par <button> par son id -->
-            <!-- // pour   $cardsInfos[$countTotalItems] = ['title' => $title, 'date' => $pubdate, 'urlImg' => $urlImg, 'description' => $description, 'link' => $linkArticle]; -->
-
+    
             <div class="modal fade" id="infos<?= $key ?>" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
                 <div class="modal-dialog" modal-dialog-centered">
                     <div class="modal-content fst-italic.">

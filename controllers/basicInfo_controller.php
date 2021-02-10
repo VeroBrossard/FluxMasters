@@ -1,8 +1,16 @@
 <?php
 $cardsInfos = [];  //initialisation du tableau pour stocker les infos des Cards
-// titre, date de publication, img (adress url), description (article), lien vers article complet.
 
-//['Mathilde' => 27, 'Pierre' => 29, 'Amandine' => 21];
+        //  $cardsInfos[$ind] =  [
+        // 'title' => $title, (titre de l'ietm affiché)
+        // 'date' => $pubdate, (date de publication)
+        // 'urlImg' => $urlImg, (adress url)
+        // 'description' => $description, (corps de l'article)
+        //'link' => $linkArticle]; (lien vers article complet)
+
+        //$sous_util = $cardsInfos[1];  exemple recup infos du 1éme item (!! le compte commence à 1)
+        // urlimg  =  ' . $sous_util['urlImg'] . '<br><br>';
+
 $arrayFluxOffered = [
   'Actualités' => 'https://www.01net.com/rss/info/flux-rss/flux-toutes-les-actualites/',
   'Tous les Tests 01.net' => 'https://www.01net.com/rss/tests/les-derniers-tests/rss-derniers-tests/',
