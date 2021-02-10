@@ -25,7 +25,7 @@
                 </div>
             </div> <!-- fin class row-->
             <!--   fenetre modale liée à <a> ou  par <button> par son id -->
-    
+
             <div class="modal fade" id="infos<?= $key ?>" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
                 <div class="modal-dialog" modal-dialog-centered">
                     <div class="modal-content fst-italic.">
