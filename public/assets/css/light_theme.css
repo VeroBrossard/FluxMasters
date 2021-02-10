@@ -3,7 +3,10 @@
 body {
     background-color: #eeeeee;
 }
-
+h1{
+    text-align:center;
+    color: rgb(134, 137, 153);
+}
 .containt {
     padding: 1rem;
 }

@@ -86,9 +86,13 @@ echo '</ul>';
 echo 'nbre totaal de items  = ' .  $countTotalItems . '<br>';
 //echo '***********affichage du tab  cardsInfos  <pre>';
 //print_r($cardsInfos);
-'</pre>';
-
-
+// '</pre>';
+echo 'nbre totaal de items  = ' .  $countTotalItems . '<br>';
+if (!empty($_COOKIE['theme'])) {
+  echo 'theme   COOKIE ok <br>';
+  $theme = $_COOKIE['theme'];
+  echo 'hosenFluxName  = ' .  $theme . '<br>';
+}
 // $sous_util = $cardsInfos[5];  // exemple recup infos du 5éme item (!! le compte commence à 1)
 // echo '$sous_util / urlimg  =  ' . $sous_util['urlImg'] . '<br><br>';
 

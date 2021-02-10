@@ -1,7 +1,6 @@
     <body>
-        <!-- pour memoire  logo 01.net :
-        src="https://scontent-cdt1-1.xx.fbcdn.net/v/t1.0-1/cp0/p50x50/75435858_10158004797767650_4207896055368384512_n.jpg?_nc_cat=1&ccb=2&_nc_sid=dbb9e7&_nc_ohc=xx80r1C07HMAX96DW6W&_nc_ht=scontent-cdt1-1.xx&tp=27&oh=66c49190dafeb285c0aca3ee62c43908&oe=6046FE1F" -->
-        <h1 style="color:white; text-align:center;"><?= $fluxTitle ?> </h1>
+
+        <h1><?= $fluxTitle ?> </h1>
         <?php
         // pour   $cardsInfos[$countTotalItems] = ['title' => $title, 'date' => $pubdate, 'urlImg' => $urlImg, 'description' => $description, 'link' => $linkArticle];
         //$sous_util = $cardsInfos[1];  // exemple recup infos du 1éme item (!! le compte commence à 1)
