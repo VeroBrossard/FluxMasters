@@ -24,9 +24,4 @@
 
         }
 
-
-    foreach($arrayFluxOffered as $key => $value) {
-        for($key = 0; $key < 5; $key++) {
-            echo $key;
-        }
-    }
+    $i = 1;

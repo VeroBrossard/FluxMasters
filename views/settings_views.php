@@ -21,40 +21,28 @@
                         <label class="btn btn-danger" for="theme3">Thème moderne</label>
                     </div>
 
-                    <p>Choisissez votre catégorie (Actuelle : <b><?= $show_categories; ?></b>)</p>
+                    <p>Choisissez votre catégorie</p>
 
                     <div class="card-check">
 
+                        <?php
+                        foreach ($arrayFluxOffered as $key => $value) {
+                            if ($i <= 5) { ?>
+                                
                         <div class="form-check">
-                            <input class="form-check-input" type="radio" value="Actualités" name="category" id="CategorieRadio1" <?= $show_categories == "Actualités" ? "checked" : "" ?>>
+                            <input class="form-check-input" type="radio" value="<?= $key; ?>" name="category" id="CategorieRadio1" <?= $show_categories == "Actualités" ? "checked" : "" ?>>
                             <label class="form-check-label" for="CategorieRadio1">
-                            Actualités
+                                <?= $key; ?>
                             </label>
                         </div>
-                        <div class="form-check">
-                            <input class="form-check-input" type="radio" value="Sécurité" name="category" id="CategorieRadio2" <?= $show_categories == "Sécurité" ? "checked" : "" ?>>
-                            <label class="form-check-label" for="CategorieRadio2">
-                                Sécurité
-                            </label>
-                        </div>
-                        <div class="form-check">
-                            <input class="form-check-input" type="radio" value="Culture" name="category" id="CategorieRadio3" <?= $show_categories == "Culture" ? "checked" : "" ?>>
-                            <label class="form-check-label" for="CategorieRadio3">
-                                Culture
-                            </label>
-                        </div>
-                        <div class="form-check">
-                            <input class="form-check-input" type="radio" value="Automobile" name="category" id="CategorieRadio4">
-                            <label class="form-check-label" for="CategorieRadio4">
-                                Automobile
-                            </label>
-                        </div>
-                        <div class="form-check">
-                            <input class="form-check-input" type="radio" value="Jeux Vidéos" name="category" id="CategorieRadio5">
-                            <label class="form-check-label" for="CategorieRadio5">
-                                Jeux vidéos
-                            </label>
-                        </div>
+
+                            <?php }
+                            $i++;
+                        }
+
+                        ?>
+
+                
 
 
                     </div>
