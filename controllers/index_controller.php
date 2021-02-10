@@ -26,6 +26,7 @@ function getXml($url)  //pour regler mon pb d'autorisation d'acces au flux rss
 $urlFeed = $arrayFluxOffered ['Actualités'];
 $xml_file = getXml($urlFeed);
 $rss = simplexml_load_string($xml_file);
+$fluxTitle = (string) $rss->channel->title;
 //   echo 'var_dump de rss <br>';
 // var_dump($rss);  
 // echo '***** FIN **** var_dump de rss <br>';
@@ -66,10 +67,21 @@ foreach ($rss->channel->item as $item) {
 echo '</ul>';
 
 echo 'nbre totaal de items  = ' .  $countTotalItems . '<br>';
-echo '***********affichage du tab  cardsInfos  <pre>';
-print_r($cardsInfos);
+//echo '***********affichage du tab  cardsInfos  <pre>';
+//print_r($cardsInfos);
 '</pre>';
 
 
 // $sous_util = $cardsInfos[5];  // exemple recup infos du 5éme item (!! le compte commence à 1)
 // echo '$sous_util / urlimg  =  ' . $sous_util['urlImg'] . '<br><br>';
+
+// ***** partie cookie  
+if (!empty($_COOKIE['category '])){  
+  $chosenFluxName= $_COOKIE['category '];
+  echo 'hosenFluxName  = ' .  $chosenFluxName . '<br>';
+}
+else{
+  echo 'hosenFluxName  PAS DE COOKIE <br>';
+}
+
+?>
