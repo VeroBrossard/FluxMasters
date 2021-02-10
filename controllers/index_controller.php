@@ -75,6 +75,21 @@ echo 'nbre totaal de items  = ' .  $countTotalItems . '<br>';
 // $sous_util = $cardsInfos[5];  // exemple recup infos du 5éme item (!! le compte commence à 1)
 // echo '$sous_util / urlimg  =  ' . $sous_util['urlImg'] . '<br><br>';
 
+
+// if(!empty($my_theme)) {
+//   setcookie("theme", $my_theme, time()+3600*24);
+// }
+
+// if(!empty($my_category)) {
+//   setcookie("category", $my_category, time()+3600*24);
+// }
+
+// if(!empty($numberArticles)) {
+//   setcookie("numberArticles", $numberArticles, time()+3600*24);
+// }
+
+
+
 // ***** partie cookie  
 if (!empty($_COOKIE['category'])){  
   $chosenFluxName= $_COOKIE['category'];
