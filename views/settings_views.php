@@ -30,7 +30,7 @@
                             if ($i <= 5) { ?>
                                 
                         <div class="form-check">
-                            <input class="form-check-input" type="radio" value="<?= $key; ?>" name="category" id="CategorieRadio1" <?= $show_categories == "Actualités" ? "checked" : "" ?>>
+                            <input class="form-check-input" type="radio" value="<?= $key; ?>" name="category" id="CategorieRadio1" <?= $show_categories == $key ? "checked" : "" ?>>
                             <label class="form-check-label" for="CategorieRadio1">
                                 <?= $key; ?>
                             </label>
