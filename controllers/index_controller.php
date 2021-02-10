@@ -16,18 +16,17 @@ function getXml($url)  //pour regler mon pb d'autorisation d'acces au flux rss
 //cookie(nbreArticles) pour le nombre de cards à afficher.
 
 // ***** partie test cookie  category 
-if (!empty($_COOKIE['category'])){  
+if (!empty($_COOKIE['category'])) {
   echo 'hosenFluxName   COOKIE ok <br>';
-  $chosenFluxName= $_COOKIE['category'];
+  $chosenFluxName = $_COOKIE['category'];
   echo 'hosenFluxName  = ' .  $chosenFluxName . '<br>';
-}
-else{
+} else {
   echo 'hosenFluxName  PAS DE COOKIE <br>';
-  setcookie("category", 'Actualités', time()+3600*24);
+  setcookie("category", 'Actualités', time() + 3600 * 24);
   $chosenFluxName = 'Actualités';
 }
 
-$urlFeed = $arrayFluxOffered [$chosenFluxName];
+$urlFeed = $arrayFluxOffered[$chosenFluxName];
 $xml_file = getXml($urlFeed);
 $rss = simplexml_load_string($xml_file);
 $fluxTitle = (string) $rss->channel->title;
@@ -35,20 +34,23 @@ $fluxTitle = (string) $rss->channel->title;
 // var_dump($rss);  
 // echo '***** FIN **** var_dump de rss <br>';
 
-// calcul  limitation des items à afficher
-// ***** partie test cookie  category 
-if (!empty($_COOKIE['numberArticles'])){  
-  echo 'nbrCardWished   COOKIE ok <br>';
-  $nbrCardWished= $_COOKIE['numberArticles'];
-  echo 'nbrCardWished  = ' .  $chosenFluxName . '<br>';
-}
-else{
-  echo 'nbrCardWished  PAS DE COOKIE <br>';
-  setcookie("numberArticles", '5', time()+3600*24);
-  $nbrCardWished = '5';
-}
 //$nbrCardWished = 5;  //nnre de crds à afficher par défaut (mettre à jour avec choix user !!!)
 $nbrItemInFlux = count($rss->channel->item); // nbre d'items dans le flux
+// calcul  limitation des items à afficher
+// ***** partie test cookie  nbre item à afficher 
+if (!empty($_COOKIE['numberArticles'])) {
+  echo 'nbrCardWished   COOKIE ok <br>';
+  if ($_COOKIE['numberArticles'] == "Tout") {
+    $nbrCardWished = $nbrItemInFlux;
+  } else {
+    $nbrCardWished = $_COOKIE['numberArticles'];
+    echo 'nbrCardWished  = ' .  $chosenFluxName . '<br>';
+  }
+} else {
+  echo 'nbrCardWished  PAS DE COOKIE <br>';
+  setcookie("numberArticles", '5', time() + 3600 * 24);
+  $nbrCardWished = '5';
+}
 
 $nbrCardToList = ($nbrCardWished <= $nbrItemInFlux) ?  $nbrCardWished : $nbrItemInFlux;
 echo 'apres test .. nbrCardToList = ' . $nbrCardToList . '<br>';
@@ -75,7 +77,7 @@ foreach ($rss->channel->item as $item) {
     // echo 'description vaut : ' . $description . '<br>';
     // echo 'linkArticle : ' . $linkArticle . '<br>';
 
-// remplissage du tableau 
+    // remplissage du tableau 
     $cardsInfos[$countTotalItems] = ['title' => $title, 'date' => $pubdate, 'urlImg' => $urlImg, 'description' => $description, 'link' => $linkArticle];
   }
 }
@@ -102,9 +104,3 @@ echo 'nbre totaal de items  = ' .  $countTotalItems . '<br>';
 // if(!empty($numberArticles)) {
 //   setcookie("numberArticles", $numberArticles, time()+3600*24);
 // }
-
-
-
-
-
-?>

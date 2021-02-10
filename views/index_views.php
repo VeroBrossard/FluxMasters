@@ -37,13 +37,13 @@
                     <div class="modal-content fst-italic.">
                         <!-- Contenu de la fenêtre modale  -->
                         <img src="<?= $sous_util['urlImg'] ?>" alt=" photo de l'article">
-                        article du <?= $sous_util['date'] ?>
-                        <span style=" display: inline-block; text-align:right;"><button type="button" class="btn-close" data-bs-dismiss="modal"></button></span>
+                        <span style="color: blueviolet;" class="fst-italic ps-3">article du <?= $sous_util['date'] ?></span>
+                        <span style="color: green; text-align:right;" class="pe-3"><button type="button" class="btn-close" data-bs-dismiss="modal"></button></span>
                         <h5 class="card-title">
                             <div class="modal-header">
                                 <h5 class="modal-title text-wrap"><?= $sous_util['title'] ?> </h5>
                             </div>
-                            <div class="modal-body text-wrap">
+                            <div class="modal-body text-wrap fw-normal fst-italic">
                                 <p><?= $sous_util['description'] ?></p>
                             </div>
                             <div class="modal-footer">
