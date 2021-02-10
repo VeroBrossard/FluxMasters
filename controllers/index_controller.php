@@ -76,8 +76,8 @@ echo 'nbre totaal de items  = ' .  $countTotalItems . '<br>';
 // echo '$sous_util / urlimg  =  ' . $sous_util['urlImg'] . '<br><br>';
 
 // ***** partie cookie  
-if (!empty($_COOKIE['category '])){  
-  $chosenFluxName= $_COOKIE['category '];
+if (!empty($_COOKIE['category'])){  
+  $chosenFluxName= $_COOKIE['category'];
   echo 'hosenFluxName  = ' .  $chosenFluxName . '<br>';
 }
 else{
