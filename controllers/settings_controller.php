@@ -3,20 +3,21 @@
     if(isset($_POST["change"])) {
         
         $my_theme = trim(htmlentities(strip_tags($_POST["theme"])));
+        $my_category = trim(htmlspecialchars(strip_tags($_POST["category"])));
+        $numberArticles = trim(htmlspecialchars(strip_tags($_POST["numberArticles"])));
 
             if(!empty($my_theme)) {
-
-                if($my_theme == "default") {
-                    setcookie("theme", "default", time()+3600);
-                    header("Location: settings");
-
-                } else if($my_theme == "light") {
-                    setcookie("theme", "light", time()+3600);
-                    header("Location: settings");
-
-                } else if($my_theme == "modern") {
-                    setcookie("theme", "modern", time()+3600);
-                    header("Location: settings");
-                }
+                setcookie("theme", $my_theme, time()+3600*24);
             }
+
+            if(!empty($my_category)) {
+                setcookie("category", $my_category, time()+3600*24);
+            }
+
+            if(!empty($numberArticles)) {
+                setcookie("numberArticles", $numberArticles, time()+3600*24);
+            }
+
+                header("Location: /");
+
         }

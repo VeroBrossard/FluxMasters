@@ -8,13 +8,13 @@ $sous_util = $cardsInfos[1];  // exemple recup infos du 1éme item (!! le compte
 // echo '$sous_util / urlimg  =  ' . $sous_util['urlImg'] . '<br><br>';
 ?>
 
-        <div class="containt" style="border: 2px solid gold;">
+        <div class="containt">
 
-            <div class="rss-card shadow p-3" style="border: 2px solid red;">
+            <div class="rss-card shadow p-3">
 
-                    <div class="row" style="border: 2px solid black;">
-                        <div class="col-md-6" style="border: 2px solid pink;">
-                            <img style="border: 2px solid blue; float: left;" width="50px" src="<?=$sous_util['urlImg']?>">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <img width="50px" src="<?=$sous_util['urlImg']?>">
                             <span><?=$sous_util['title']?></span>
                         </div>
 

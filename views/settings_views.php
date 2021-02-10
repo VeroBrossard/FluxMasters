@@ -26,31 +26,31 @@
                     <div class="card-check">
 
                         <div class="form-check">
-                            <input class="form-check-input" type="radio" name="category" id="CategorieRadio1">
+                            <input class="form-check-input" type="radio" value="Actualités" name="category" id="CategorieRadio1">
                             <label class="form-check-label" for="CategorieRadio1">
                             Actualités
                             </label>
                         </div>
                         <div class="form-check">
-                            <input class="form-check-input" type="radio" name="category" id="CategorieRadio2">
+                            <input class="form-check-input" type="radio" value="Sécurité" name="category" id="CategorieRadio2">
                             <label class="form-check-label" for="CategorieRadio2">
                                 Sécurité
                             </label>
                         </div>
                         <div class="form-check">
-                            <input class="form-check-input" type="radio" name="category" id="CategorieRadio3">
+                            <input class="form-check-input" type="radio" value="Culture" name="category" id="CategorieRadio3">
                             <label class="form-check-label" for="CategorieRadio3">
                                 Culture
                             </label>
                         </div>
                         <div class="form-check">
-                            <input class="form-check-input" type="radio" name="category" id="CategorieRadio4">
+                            <input class="form-check-input" type="radio" value="Automobile" name="category" id="CategorieRadio4">
                             <label class="form-check-label" for="CategorieRadio4">
                                 Automobile
                             </label>
                         </div>
                         <div class="form-check">
-                            <input class="form-check-input" type="radio" name="category" id="CategorieRadio5">
+                            <input class="form-check-input" type="radio" value="Jeux Vidéos" name="category" id="CategorieRadio5">
                             <label class="form-check-label" for="CategorieRadio5">
                                 Jeux vidéos
                             </label>
@@ -65,19 +65,19 @@
                     <div class="card-check">
 
                         <div class="form-check">
-                            <input class="form-check-input" type="radio" name="numberArticle" id="NumberArticle1">
+                            <input class="form-check-input" type="radio" value="5" name="numberArticles" id="NumberArticle1">
                             <label class="form-check-label" for="NumberArticle1">
                                 5
                             </label>
                         </div>
                         <div class="form-check">
-                            <input class="form-check-input" type="radio" name="numberArticle" id="NumberArticle2">
+                            <input class="form-check-input" type="radio" value="10" name="numberArticles" id="NumberArticle2">
                             <label class="form-check-label" for="NumberArticle2">
                                 10
                             </label>
                         </div>
                         <div class="form-check">
-                            <input class="form-check-input" type="radio" name="numberArticle" id="NumberArticle3">
+                            <input class="form-check-input" type="radio" value="all" name="numberArticles" id="NumberArticle3">
                             <label class="form-check-label" for="NumberArticle3">
                                 Tout
                             </label>

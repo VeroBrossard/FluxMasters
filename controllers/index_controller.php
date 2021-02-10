@@ -1,4 +1,5 @@
 <?php
+
 function getXml($url)  //pour regler mon pb d'autorisation d'acces au flux rss
 {
   $ch = curl_init($url);
@@ -72,5 +73,3 @@ print_r($cardsInfos);
 
 // $sous_util = $cardsInfos[5];  // exemple recup infos du 5éme item (!! le compte commence à 1)
 // echo '$sous_util / urlimg  =  ' . $sous_util['urlImg'] . '<br><br>';
-
-?>

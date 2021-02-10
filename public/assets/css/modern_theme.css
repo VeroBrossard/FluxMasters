@@ -8,6 +8,15 @@ body {
     padding: 1rem;
 }
 
+.success {
+    background: #47b749;
+    color: white;
+    padding: 1rem;
+    width: 40%;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+
 .rss-card {
     width: 60%;
     background: linear-gradient(81deg, #21D4FD 0%, #B721FF 100%);
@@ -37,9 +46,11 @@ body {
     margin-right: auto;
     user-select: none;
     text-align: center;
+    color: white;
 }
 
 .settings-card h1 {
+    color: white;
     border-bottom: 1px solid #dedede;
 }
 
