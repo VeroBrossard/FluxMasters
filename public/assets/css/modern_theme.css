@@ -1,14 +1,57 @@
 /* Laurent : Partie du contenu */
 
 body {
-    background-color: #eeeeee;
+    background-image: url(../img/fond_moderne.jpg);
+    background-size: cover;
+    width: 60%;
+    margin: auto;
+    text-align: center;
 }
-h1{
-    text-align:center;
-    color: rgb(131, 144, 218);
+h1 {
+    text-align: center;
+    color: rgba(138, 30, 120,1);
+    text-shadow: #494949;
 }
+
+.myDiv {
+    background-color: rgba(246, 247, 250, 0.5) !important;
+    color: rgba(245, 245, 245, 0.644);
+    border-radius: 15%;
+}
+.myTitle{
+    text-shadow: 1px 1px 2px rgba(238, 23, 238, 0.623), 0 0 1em rgb(83, 14, 161), 0 0 0.2em blue;
+    color:black
+}
+.myDate {
+    text-align: left;
+    color: green;
+    padding-left: 50px;
+    font-style: italic;
+    font-size:small;
+    font-weight: bold;
+}
+.myBton{
+    text-align: left;
+    background-color: #830bbbd2;
+    color: whitesmoke;
+  padding : 3px;
+  margin-right: 20px;
+}
+
+
+/* tester si c'est utile ??? */
+
+/* ancien style  */
+
+
+.btoninfo {
+    background-color: #7ca1d4;
+    color: black;
+}
+
 .containt {
     padding: 1rem;
+    margin-bottom: 30px;
 }
 
 .rss-card {
@@ -32,7 +75,6 @@ h1{
 .settings-card {
     width: 80%;
     background: linear-gradient(81deg, #21D4FD 0%, #B721FF 100%);
-    border: 1px solid #f0f0f0;
     padding: 1rem;
     border-radius: 15px;
     display: block;
@@ -91,8 +133,8 @@ h1{
     background-color: #0faaca;
     border-color: #0faaca;
 }
-   
-    
+
+
 .btn:focus {
     border-color: inherit;
     -webkit-box-shadow: none;

@@ -6,22 +6,20 @@
         foreach ($cardsInfos as $key => $infos) {
             $sous_util = $cardsInfos[$key];
         ?>
-            <div class="container p-0 my-0 bg-info text-dark border ">
-                <div class="col-6 text-wrap p-0"> <br />
-                    <div class="card ">
-                        <div class="row text-dark">
-                            <div class="card-body class=" px-5"">
-                                <img src="<?= $sous_util['urlImg'] ?>" style="float: left; padding-right:30px;" width="150px" alt="mini photo de l'article">
-                                <h5 class="card-title fw-normal"><?= $sous_util['title'] ?></h5>
-                                <span style="   style=" clear: both;">article du <?= $sous_util['date'] ?></span>
-                                <span>
-                                    <button type="button" data-bs-toggle="modal" data-bs-target="#infos<?= $key ?>" class="btn btn-primary ">+
-                                        d'info</button>
-                                </span>
-                                <!-- Tips:  Si vous ne désirez a sque l'écran parent se grise àl'ouveture de la fenêtre, ,il faut utiliser l’attribut data-backdrop="false" dans le code du bouton déclencheur :-->
-                            </div>
-                        </div>
-                    </div>
+            <div class="row w-100 mb-4 pb-1 myDiv">
+                <div class="col-12 text-wrap w-100"> <br />
+                    <img src="<?= $sous_util['urlImg'] ?>" style="float: left; padding: 0px 30px;" width="130px" alt="mini photo de l'article">
+                    <h5 class=" fw-bold fs-6 myTitle"><?= $sous_util['title'] ?></h5>
+                </div>
+
+                <div class="row p-0">
+                    <div class="col-12 col-md-9 myDate">article du <?= $sous_util['date'] ?></div>
+                    <div class="col-12  col-md-3"><button type="button" class="badge badge-pill myBton" data-bs-toggle="modal" data-bs-target="#infos<?= $key ?>">+ d'info</button></div>
+
+
+                    <!-- Tips:  Si vous ne désirez a sque l'écran parent se grise àl'ouveture de la fenêtre, ,il faut utiliser l’attribut data-backdrop="false" dans le code du bouton déclencheur :-->
+
+
                 </div>
             </div> <!-- fin class row-->
             <!--   fenetre modale liée à <a> ou  par <button> par son id -->

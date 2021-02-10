@@ -2,19 +2,47 @@
 
 body {
     background-color: #404040;
+    width: 70%;
+    margin: auto;
+    text-align: center;
 }
 h1{
     text-align:center;
     color: rgb(131, 144, 218);
 }
+.myDiv {
+    /* background-color: rgba(246, 247, 250, 0.5) !important; */
+    color: rgba(245, 245, 245, 0.644);
+    border: 1px solid greenyellow;
+    margin:auto;
+}
+.myDate {
+    text-align: left;
+    color: black;
+    padding-left: 50px;
+    font-style: italic;
+    font-size:small;
+    font-weight: bold;
+}
+.myBton{
+    text-align: left;
+    background-color: #817d83d2;
+    /* background-color: #7ca1d4; */
+    color: black;
+  padding : 3px;
+  margin-right: 20px;
+}
+
+/* tester si c'est utile ??? */
 .containt {
     padding: 1rem;
+    margin-bottom: 30px;
 }
 
 .rss-card {
     width: 60%;
     background-color: #525252;
-    border: 1px solid #3b3b3b;
+    border: 1px solid #4edb23;
     padding: 1rem;
     border-radius: 15px;
     display: block;
