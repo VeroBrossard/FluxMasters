@@ -26,32 +26,50 @@
                     <div class="card-check">
 
                         <?php
-                        foreach ($arrayFluxOffered as $key => $value) {
-                            if ($i <= 5) { ?>
-                                
-                        <div class="form-check">
-                            <input class="form-check-input" type="radio" value="<?= $key; ?>" name="category" id="CategorieRadio1" <?= $show_categories == $key ? "checked" : "" ?>>
-                            <label class="form-check-label" for="CategorieRadio1">
-                                <?= $key; ?>
-                            </label>
-                        </div>
+                        //$input = array("Neo", "Morpheus", "Trinity", "Cypher", "Tank");
+                        $rand_keys =  array_rand($arrayFluxOffered, 5);
+                        //var_dump($rand_keys);
 
-                            <?php }
-                            $i++;
-                        }
+                        for ($i = 0; $i < 5; $i++) {
+
+                            //echo $rand_keys[$i] . "<br>";
 
                         ?>
 
-                
+                            <div class="form-check">
 
+                                <input class="form-check-input" type="radio" value="<?= $rand_keys[$i]; ?>" name="category" id="CategorieRadio1" <?= $show_categories == $rand_keys[$i] ? "checked" : "" ?>>
+                                <label class="form-check-label" for="CategorieRadio1">
+                                    <?= $rand_keys[$i]; ?>
+                                </label>
+                            </div>
+
+                            <?php
+                        }
+                        //echo $arrayFluxOffered[$rand_keys[$i]] . "\n";
+
+                        foreach ($arrayFluxOffered as $key => $value) {
+                            if ($i <= 5) {  // !! même $i que dans la boucle for => c'est fait exprès
+
+                            ?>
+
+                                <div class="form-check">
+
+                                    <input class="form-check-input" type="radio" value="<?= $key; ?>" name="category" id="CategorieRadio1" <?= $show_categories == $key ? "checked" : "" ?>>
+                                    <label class="form-check-label" for="CategorieRadio1">
+                                        <?= $key; ?>
+                                    </label>
+                                </div>
+
+                        <?php
+                                $i++;
+                            }
+                        }
+                        ?>
 
                     </div>
-
-
                     <p>Nombre d'articles à afficher (Actuel : <b><?= $number_articles; ?></b>)</p>
-
                     <div class="card-check">
-
                         <div class="form-check">
                             <input class="form-check-input" type="radio" value="5" name="numberArticles" id="NumberArticle1" <?= $number_articles == "5" ? "checked" : "" ?>>
                             <label class="form-check-label" for="NumberArticle1">
@@ -70,20 +88,14 @@
                                 Tout
                             </label>
                         </div>
-
-
                     </div>
 
                     <button type="submit" name="change" class="btn btn-success mt-4">Enregistrer vos changements</button>
 
                 </form>
-
             </div>
-
         </div>
-
         </div>
-
     </body>
 
     </html>
