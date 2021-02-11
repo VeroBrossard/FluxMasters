@@ -37,8 +37,12 @@
                             </div>
                             <div class="modal-body text-wrap fw-normal fst-italic">
                                 <p><?= $sous_util['description'] ?></p>
+                               
                             </div>
                             <div class="modal-footer">
+
+                            <span style="color:blue; text-align:left;" > <a href="<?= $sous_util['link'] ?>" title="vers l'article complet" >Voir article complet</a></span>
+ 
                                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fermer</button>
 
                             </div>
