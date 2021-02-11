@@ -17,8 +17,8 @@ function getXml($url)  //pour regler mon pb d'autorisation d'acces au flux rss
 }
 
 //$chosenFluxName = ('https://www.01net.com/info/flux-rss/'); 
-//pour l'instant url unique, plus tard choix pour valeur dans tableau de url à lire.
-//$urlFeed = $chosenFluxName; //plus tard, valeur dans tableau url à lire
+//pour l'instant url unique, plus tard choix pour valeur dans tableau de sites proposant des flux rss à lire.
+//$urlFeed = $chosenFluxName; //plus tard, valeur dans tableau url à lire extrait d'un site de flux rss.
 //$xml_file = getXml($urlFeed);
 //$rss = simplexml_load_string($xml_file);
 //echo 'debut var_dump var_dump($xml_file) <br>';
@@ -41,23 +41,23 @@ $codesource = getXml('https://www.01net.com/info/flux-rss/');
 //en le remplaçant par .+ (qui veut dire n’importe quel caractère, plusieurs fois).
 //Et pour finir on met des parenthèses (.+) sur ce que l’on veut capturer.)
 
-preg_match_all("#<a target=\"_blank\" href=\"//(.+)\" title=\"Flux RSS - 01net - (.+)\" rel=\"nofollow\">#iU", $codesource, $tableau_resultat);
+preg_match_all("#<a target=\"_blank\" href=\"//(.+)\" title=\"Flux RSS - 01net - (.+)\" rel=\"nofollow\">#iU", $codesource, $tableau_resultat_Rss);
 //#i (insensible à la casse) 
 //#U (modifier: Ungreedy. The match becomes lazy by default. Now a ? following a quantifier makes it greedy)
 echo "debut du print-r  <br> <pre>";
-// print_r($tableau_resultat);
+// print_r($tableau_resultat_Rss);
 
-echo 'ci-dessous, $tableau_resultat[1] <br>';
-print_r($tableau_resultat[1]);
+echo 'ci-dessous, $tableau_resultat_Rss[1] <br>';
+print_r($tableau_resultat_Rss[1]);
 
-echo '<br>  ci-dessous, $tableau_resultat[2] <br>';
-print_r($tableau_resultat[2]);
+echo '<br>  ci-dessous, $tableau_resultat_Rss[2] <br>';
+print_r($tableau_resultat_Rss[2]);
 
-echo'<br> ci-dessous, $tableau_resultat[1][0] <br>';
-print_r($tableau_resultat[1][0]);
+echo'<br> ci-dessous, $tableau_resultat_Rss[1][0] <br>';
+print_r($tableau_resultat_Rss[1][0]);
 
-echo'<br> ci-dessous, $tableau_resultat[2][0] <br>';
-print_r($tableau_resultat[2][0]);
+echo'<br> ci-dessous, $tableau_resultat_Rss[2][0] <br>';
+print_r($tableau_resultat_Rss[2][0]);
 echo "</pre>  FIN du print-r <br>";
 
 ?>

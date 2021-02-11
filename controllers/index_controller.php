@@ -13,6 +13,24 @@ function getXml($url)  //pour regler mon pb d'autorisation d'acces au flux rss
   curl_close($ch);
   return $curl_response;
 }
+//choix du site de flux rss
+$codesource = getXml('https://www.01net.com/info/flux-rss/');
+
+//récupération des flux (url et nom) de la page $codesource d'après regex
+preg_match_all("#<a target=\"_blank\" href=\"//(.+)\" title=\"Flux RSS - 01net - (.+)\" rel=\"nofollow\">#iU", $codesource, $tableau_resultat_Rss);
+//#i (insensible à la casse) 
+//#U (modifier: Ungreedy. The match becomes lazy by default. Now a ? following a quantifier makes it greedy)
+
+
+//affichage pour test
+// echo'<br> ci-dessous, $tableau_resultat_Rss[1][0] => adressses url du flux 0 <br>';
+// print_r($tableau_resultat_Rss[1][0]);
+
+// echo'<br> ci-dessous, $tableau_resultat_Rss[2][0]  =>  nom du flux  0<br>';
+// print_r($tableau_resultat_Rss[2][0]);
+// echo "</pre>  FIN du print-r <br>";
+
+
 
 // ***** partie test cookie  category de flux à afficher
 if (!empty($_COOKIE['category'])) {

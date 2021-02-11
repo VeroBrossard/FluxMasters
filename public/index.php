@@ -2,7 +2,7 @@
 
     $title_page = "Accueil";
     
-    require_once("../controllers/boot_controller.php");
+    require("../controllers/boot_controller.php");;
 
     require_once("../controllers/basicInfo_controller.php");
 
