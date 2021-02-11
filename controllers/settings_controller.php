@@ -26,5 +26,3 @@ if (isset($_POST["change"])) {
 
     header("Location: /");
 }
-
-$i = 1;  //pourquoi faire ???

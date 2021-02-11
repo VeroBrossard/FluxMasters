@@ -52,7 +52,7 @@ foreach ($rss->channel->item as $item) {
     $urlImg = (string)$item->enclosure['url'];
     $description = strip_tags((string) $item->description);
     $linkArticle = (string)$item->link;
-echo 'linkArticle =' .$linkArticle .'<br>';
+
     // remplissage du tableau cardsInfos pour affichage ensuite des infos par item
     $cardsInfos[$countTotalItems] = ['title' => $title, 'date' => $pubdate, 'urlImg' => $urlImg, 'description' => $description, 'link' => $linkArticle];
   }
