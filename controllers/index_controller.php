@@ -21,9 +21,11 @@ if (!empty($_COOKIE['category'])) {
   setcookie("category", 'Actualités', time() + 3600 * 24);
   $chosenFluxName = 'Actualités';
 }
-$urlFeed = $arrayFluxOffered[$chosenFluxName];
+$urlFeed = $arrayFluxOffered[$chosenFluxName]; //on récupère url stockée dans tableau
 $xml_file = getXml($urlFeed);
 $rss = simplexml_load_string($xml_file);
+
+
 $fluxTitle = (string) $rss->channel->title;
 
  // nbre d'items dans le flux
