@@ -14,7 +14,7 @@
                         <label class="btn btn-primary" for="theme2">Thème clair</label>
 
                         <input type="radio" class="btn-check" name="theme" id="theme3" value="modern" autocomplete="off" <?= $theme == "modern" ? "checked" : "" ?>>
-                        <label class="btn btn-danger" for="theme3">Thème homage</label>
+                        <label class="btn btn-danger" for="theme3">Thème hommage</label> <!-- hommage à Denis  -->
                     </div>
 
                     <p>Choisissez votre catégorie</p>

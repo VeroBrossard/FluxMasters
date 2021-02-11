@@ -33,6 +33,9 @@ h1{
   padding : 3px;
   margin-right: 20px;
 }
+.myFooterText{
+    color: #c5c5c5;
+}
 
 /* tester si c'est utile ??? */
 .containt {
