@@ -22,7 +22,11 @@ h1 {
     background: #353535;
 }
 .myTitle{
+<<<<<<< HEAD
     color:black
+=======
+    color :black;
+>>>>>>> 6c9987b18910a1f61c982f376f2c856b47a27852
 }
 .myDate {
     text-align: left;
