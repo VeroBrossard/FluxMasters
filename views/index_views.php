@@ -6,7 +6,7 @@
         foreach ($cardsInfos as $key => $infos) {
             $sous_util = $cardsInfos[$key];
         ?>
-            <div class="row w-100 mb-4 pb-1 myDiv">
+            <div data-aos="fade-up" class="row mb-4 pb-1 myDiv">
                 <div class="col-12 text-wrap w-100"> <br />
                     <img src="<?= $sous_util['urlImg'] ?>" style="float: left; padding: 0px 30px;" width="130px" alt="mini photo de l'article">
                     <h5 class=" fw-bold fs-6 myTitle"><?= $sous_util['title'] ?></h5>

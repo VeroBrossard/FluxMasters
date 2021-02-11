@@ -12,9 +12,11 @@ h1{
     color: rgb(134, 137, 153);
 }
 .myDiv {
-text-align: left;
-margin-left: 40px;
+    text-align: left;
+    border: 1px solid #c3c3c3;
+    background: white;
 }
+
 .myTitle{
     color:black
 }

@@ -13,12 +13,13 @@ h1{
 .myDiv {
     /* background-color: rgba(246, 247, 250, 0.5) !important; */
     color: rgba(245, 245, 245, 0.644);
-    border: 1px solid greenyellow;
-    margin:auto;
+    border: 1px solid #131313;
+    margin: auto;
+    background: #353535;
 }
 .myDate {
     text-align: left;
-    color: black;
+    color: #c5c5c5;
     padding-left: 50px;
     font-style: italic;
     font-size:small;
