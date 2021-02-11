@@ -6,7 +6,7 @@
                 <p>Choisissez votre thème (Actuel : <b><?= $theme_name; ?></b>)</p>
                 <form method="post">
 
-                    <div class="btn-group" role="group" aria-label="Basic radio toggle button group">
+                    <div class="btn-group flex-wrap" role="group" aria-label="Basic radio toggle button group">
                         <input type="radio" class="btn-check" name="theme" id="theme1" value="default" autocomplete="off" <?= $theme == "default" ? "checked" : "" ?>>
                         <label class="btn btn-secondary" for="theme1">Thème sombre</label>
 
