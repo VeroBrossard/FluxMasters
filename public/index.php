@@ -1,6 +1,6 @@
 <?php
 
-    $title_page = "Accueuil";
+    $title_page = "Accueil";
     
     require_once("../controllers/boot_controller.php");
 
