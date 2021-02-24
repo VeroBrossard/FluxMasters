@@ -2,9 +2,11 @@
   <div class="container-fluid">
     <a class="navbar-brand" href="/"><?= $site_name; ?></a>
 
-    <button  type="button" data-bs-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false">
+    <button class="navbar_style_button hover-no-border" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
                 <i class="config_button fas fa-cog fa-2x"></i>
-            </button>**********
+            </button>
+            
+            **********
 
 
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
@@ -24,3 +26,7 @@
     </div>
   </div>
 </nav>
+
+<?php
+require ("parametres_view.php");
+?>

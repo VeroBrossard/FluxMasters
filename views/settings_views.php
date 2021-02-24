@@ -3,8 +3,8 @@
             <div class="settings-card">
                 <h1>Paramètres</h1>
 
-                <p>Choisissez votre thème (Actuel : <b><?= $theme_name; ?></b>)</p>
                 <form method="post">
+                <p>Choisissez votre thème (Actuel : <b><?= $theme_name; ?></b>)</p>
 
                     <div class="btn-group flex-wrap" role="group" aria-label="Basic radio toggle button group">
                         <input type="radio" class="btn-check" name="theme" id="theme1" value="default" autocomplete="off" <?= $theme == "default" ? "checked" : "" ?>>
